@@ -4,15 +4,16 @@ import Link from "next/link";
 import { useState } from "react";
 import { IoMenu, IoClose } from "react-icons/io5";
 import clsx from "clsx";
-import Footer from "./footer";
+import Footer from "../footer";
+import Hero from "../Hero";
 
 const Navlink = () => {
   const [open, setIsOpen] = useState(false);
   return (
-    <div className="w-full  bg-white  top-0 z-50">
+    <div className="w-full  bg-white  top-0 z-50 ">
       <>
-        {/* Toggle Button for Mobile */}
-        <div className="flex justify-end md:hidden px-4 py-3">
+        {/* Toggle Button for Mobile */}  
+        <div className="flex justify-end md:hidden px-4 py-4">
           <button
             onClick={() => setIsOpen(!open)}
             className="inline-flex items-center justify-center p-2 text-sm text-gray-500 rounded-md hover:bg-gray-100 transition-all duration-200"
@@ -94,7 +95,7 @@ const Navlink = () => {
             <li className="pt-2 md:pt-0">
               <Link
                 href="/signin"
-                className="block text-center py-2.5 px-6 bg-orange-400 text-white hover:bg-orange-500 rounded-sm md:ml-4"
+                className="block text-center py-2.5 px-6 bg-black text-white hover:bg-gray-800 rounded-sm md:ml-4"
               >
                 Sign in
               </Link>
